@@ -51,6 +51,6 @@ deploy_dev:
   - kubectl config set-context default --cluster=ice-challenge-dev --user=admin
   - kubectl config use-context default
   - kubectl config view
-  - kubectl apply -f kubernetes.yml
+  - kubectl apply -f deployment.yml
   only:
   - master
