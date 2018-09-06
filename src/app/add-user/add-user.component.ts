@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { User } from '../models/User'
+import { User } from '../models/User';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-add-user',
@@ -9,11 +10,9 @@ import { User } from '../models/User'
 })
 export class AddUserComponent implements OnInit {
 
-  // TODO: double check with carlos what property names are for user
-  // TODO: bind user properties into template
   public user: User;
 
-  constructor() {
+  constructor(private userService: UserService) {
     this.user = new User();
   }
 
@@ -21,5 +20,6 @@ export class AddUserComponent implements OnInit {
   }
 
   addUser() {
+    this.userService.addUser(this.user);
   }
 }
