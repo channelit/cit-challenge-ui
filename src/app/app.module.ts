@@ -9,6 +9,7 @@ import {SplashComponent} from './splash/splash.component';
 import {HeaderComponent} from './layout/header/header.component';
 import {MenuComponent} from './layout/menu/menu.component';
 import {AppModuleIncludeMaterial} from './app.module.include.material';
+import { AddUserComponent } from './add-user/add-user.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import {AppModuleIncludeMaterial} from './app.module.include.material';
     AuthComponent,
     SplashComponent,
     HeaderComponent,
-    MenuComponent
+    MenuComponent,
+    AddUserComponent
   ],
   imports: [
     BrowserModule,
