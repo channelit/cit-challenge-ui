@@ -47,7 +47,7 @@ deploy_dev:
   - mkdir -p $HOME/.kube
   - echo -n $KUBE_CONFIG | base64 -d > $HOME/.kube/config
   - kubectl config set-cluster ice-challenge-dev --server="$KUBE_URL" --insecure-skip-tls-verify=true
-  - kubectl config set-credentials --username="$KUBE_USER" --password="$KUBE_PASSWORD"
+  - kubectl config set-credentials admin --username="$KUBE_USER" --password="$KUBE_PASSWORD"
   - kubectl config set-context default --cluster=ice-challenge-dev --user=admin
   - kubectl config use-context default
   - kubectl config view
