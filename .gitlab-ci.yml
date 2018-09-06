@@ -15,7 +15,9 @@ stages:
 ui-build:
   image: cithub/angular
   stage: build
-  script: "ng build --prod"
+  script:
+    - npm install
+    - ng build --prod
   artifacts:
     paths:
     - dist
